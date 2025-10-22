@@ -1,0 +1,33 @@
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .slider_section {
+    height: auto;
+    padding: 50px 0;
+  }
+  .slider_title {
+    font-size: 2rem;
+  }
+}/* gallery section */
+@media (max-width: 767px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+  .item-1 {
+    grid-column: span 2; /* Each image takes one column */
+  }
+}
+/* contact section */
+@media (max-width: 767px) {
+  .contact_section .row {
+    flex-direction: column; /* Stack form and map */
+  }
+  .contact_section form {
+    padding-right: 0; /* Remove extra padding */
+  }
+}
+@media (max-width: 767px) {
+  .info_section .row {
+    flex-direction: column; /* Stack columns */
+    text-align: center;
+  }
+}

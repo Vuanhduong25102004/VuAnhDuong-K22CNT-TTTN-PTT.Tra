@@ -1,8 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
   font-family: 'Poppins', sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
-  margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
 }
 .navbar{
     position: relative;
@@ -75,8 +86,8 @@ body {
 
 .slider_title {
     font-size: 3rem;
-    font-weight: 800;
     text-transform: uppercase;
+    font-weight: 600;
     margin-bottom: 20px;
     color:#0c0c0c
 }
@@ -132,3 +143,320 @@ body {
     color: #fff;
 }
 /* section 2 */
+.about_section {
+    padding: 90px 0px ;
+}
+.about_section .img-box {
+    overflow: hidden;
+}
+.about_section .img-box img {
+    width: 100%;
+    border-radius: 25px;
+}
+.about_section .detail-box h2 {
+  font-weight: 600;
+}
+
+.about_read_more_btn {
+    padding: 12px 35px;
+    display: inline-block;
+    padding: 12px 35px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.about_read_more_btn:hover {
+    background-color: #427a45;
+    color: #fff;
+}
+
+/* we do section */
+.wedo_section{
+    padding: 0px 0px 90px 0px;
+}
+.heading_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; 
+}
+
+.heading_center {
+  justify-content: center;
+  text-align: center; 
+}
+
+.heading_container h2 {
+  padding: 0 20px; 
+  margin: 0;
+  font-weight: 600;
+  white-space: nowrap; 
+}
+
+.heading_container hr {
+  width: 45px;
+  border: none;
+  border-top: 2px solid #000000;
+  margin: 0;
+}
+.wedo_box{
+    margin: 45px 0px 0px 0px;
+}
+.wedo_detail-box h6{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.wedo_img-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  background-color: #4da750;
+  margin-bottom: 20px;
+}
+.wedo_img-box img {
+  max-width: 50%;
+}
+/* gallery section */
+.container-fluid{
+    padding: 0px;
+}
+.gallery-container {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* --- TÙY CHỈNH KÍCH THƯỚC TỪNG ẢNH --- */
+
+.item-1 {
+    grid-column: span 2;
+}
+
+.item-5 {
+    grid-column: span 1;
+}
+
+.item-6 {
+    grid-column: span 2;
+}
+/* client section */
+.client_section{
+    padding: 90px 0px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('imgs/client-bg.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: #0c0c0c;
+}
+.client_section .row{
+    display: flex;
+    flex-direction: column;
+}
+.client_section .box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn các mục sang trái */
+    margin-top: 45px;
+}
+.client_section .img-box {
+    margin-left: 25px; /* Đẩy ảnh sang phải để thẳng hàng với text */
+    margin-bottom: -50px;
+    z-index: 1;
+}
+.client_section .img-box img{
+    max-width: 105px;
+    height: auto;
+    border: 5px solid #4da750;
+    border-radius: 100px;
+}
+.client_section .detail-box{
+    width: 100%;
+    height: auto;
+    padding: 75px 25px 25px 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+}
+.client_section .detail-box-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.info-client h6 {
+    font-weight: 600;
+}
+.info-client p{
+    font-size: small;
+}
+.client_section .detail-box-info i {
+  color: #4da750;
+  font-size: 20px;
+}
+/* contact section */
+.contact_section{
+    padding: 90px 0px;
+}
+.contact_section form{
+    padding-right: 35px;
+}
+.contact_section .heading_container h2{
+    padding-left: 0px;
+    margin-bottom: 45px;
+}
+.contact_section input, .contact_section textarea {
+    padding-left: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 0;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    outline: none;
+    color: #101010;
+}
+.contact_section textarea.message-box {
+    min-height: 120px; 
+    height: auto; 
+    padding-top: 15px; 
+    resize: none; 
+    overflow-y: hidden; 
+}
+.contact_section button{
+    text-transform: uppercase;
+    padding: 15px 55px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    border: 1px solid #5aa469;
+    color: #fff;
+    font-weight: bold;
+    background-color: #5aa469;
+}
+.contact_info a span {
+    display: inline-block; 
+    max-width: 200px;
+    vertical-align: middle; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.map_container {
+    height: 100%;
+    min-height: 420px; 
+}
+/* info section */
+.info_section{
+    background-color: #121212;
+    color: #ffffff;
+    padding: 75px 0;
+}
+.info_section .row{
+    display: flex;
+}
+.info_section .row h5{
+    margin: 20px 0 25px 0;
+    text-transform: uppercase;
+}
+.info_section .info_form form{
+    display: flex;
+}
+.info_section .info_form form input {
+    min-width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+}
+.info_section .info_form form button {
+    padding: 0 45px;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #5aa469;
+    -webkit-transform: translate(-102%);
+    transform: translate(-102%);
+    margin-top: 2.5px;
+}
+.info_section .info_logo a img {
+    width: 40px;
+    filter: invert(1);
+}
+.info_section .info_logo a span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+.info_logo a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.contact_info{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+.contact_info a{
+    text-decoration: none;
+    color: #fff;
+}
+.contact_info a:hover{
+    text-decoration: none;
+    color: #4CAF50;
+
+}
+.contact_info i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+.social_box{
+    margin: 20px 0px 10px 0px;
+}
+.social_box a{
+    margin-right: 10px;
+}
+.social_box a:hover{
+    color: #4CAF50;
+}
+.social_box i{
+    font-size: 20px;
+}
+/* footer */
+.footer_section {
+    background-color: #121212;
+}
+.footer_section p {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
