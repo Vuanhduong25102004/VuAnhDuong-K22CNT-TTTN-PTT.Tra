@@ -10,24 +10,24 @@
 }/* gallery section */
 @media (max-width: 767px) {
   .gallery-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
   .item-1 {
-    grid-column: span 2; /* Each image takes one column */
+    grid-column: span 2;
   }
 }
 /* contact section */
 @media (max-width: 767px) {
   .contact_section .row {
-    flex-direction: column; /* Stack form and map */
+    flex-direction: column; 
   }
   .contact_section form {
-    padding-right: 0; /* Remove extra padding */
+    padding-right: 0; 
   }
 }
 @media (max-width: 767px) {
   .info_section .row {
-    flex-direction: column; /* Stack columns */
+    flex-direction: column; 
     text-align: center;
   }
 }

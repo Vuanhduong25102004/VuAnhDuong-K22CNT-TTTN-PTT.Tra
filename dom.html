@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành thao tác DOM</h1>
+
+    <p id="text-to-change">Đây là một đoạn văn bản.</p>
+    <button id="change-text-btn">Thay đổi văn bản</button>
+
+    <div id="container" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+        <p>Mục đầu tiên</p>
+    </div>
+    <button id="add-item-btn" style="margin-top: 10px;">Thêm mục mới</button>
+
+    <script>
+        // Viết code thao tác DOM của bạn ở đây
+
+        // Ví dụ 1: Thay đổi nội dung và style của một phần tử
+        const changeTextBtn = document.getElementById('change-text-btn');
+        const textToChange = document.getElementById('text-to-change');
+
+        changeTextBtn.addEventListener('click', function() {
+            textToChange.textContent = "Văn bản đã được thay đổi!";
+            textToChange.classList.toggle('highlight');
+        });
+
+        // Ví dụ 2: Thêm một phần tử mới vào DOM
+        const addItemBtn = document.getElementById('add-item-btn');
+        const container = document.getElementById('container');
+
+        addItemBtn.addEventListener('click', function() {
+            const newItem = document.createElement('p');
+            newItem.textContent = 'Một mục mới vừa được thêm vào.';
+            container.appendChild(newItem);
+        });
+    </script>
+</body>
+</html>

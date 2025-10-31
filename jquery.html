@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practice - Change Background Color</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s ease;
+            text-align: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .color-buttons button {
+            border: 2px solid #555;
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .color-buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chọn màu</h1>
+        <p>Nhấn vào một nút để thay đổi màu nền của trang.</p>
+        <div class="color-buttons">
+            <button>Blue</button>
+            <button>Red</button>
+            <button>Yellow</button>
+            <button>Green</button>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Bắt sự kiện click trên các button trong div có class 'color-buttons'
+            $('.color-buttons button').on('click', function() {
+                // Lấy nội dung text của button được nhấn (ví dụ: "Blue", "Red")
+                // và chuyển thành chữ thường để khớp với tên màu trong CSS
+                var color = $(this).text().toLowerCase();
+
+                // Thay đổi thuộc tính 'background-color' của thẻ body
+                $('body').css('background-color', color);
+            });
+        });
+    </script>
+</body>
+</html>
